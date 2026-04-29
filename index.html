@@ -68,12 +68,16 @@ background:linear-gradient(135deg,#1a1a1a,#2a2a2a,#111);
 border-radius:14px;
 box-shadow:0 8px 20px rgba(0,0,0,0.5);">
 
-<img id="img" src="https://i.imgur.com/e5TSGMl.png" style="width:100%;height:160px;object-fit:cover;border-radius:10px;">
+<div style="width:100%;height:160px;border-radius:10px;
+background:linear-gradient(135deg,#111,#1c1c1c);
+display:flex;align-items:center;justify-content:center;overflow:hidden;">
+  <img id="img" src="https://i.imgur.com/e5TSGMl.png" style="max-width:100%;max-height:100%;object-fit:contain;">
+</div>
 
 <button onclick="prev()" style="position:absolute;top:70px;left:6px;background:rgba(0,0,0,0.6);color:white;border:none;border-radius:50%;width:26px;height:26px;">‹</button>
 <button onclick="next()" style="position:absolute;top:70px;right:6px;background:rgba(0,0,0,0.6);color:white;border:none;border-radius:50%;width:26px;height:26px;">›</button>
 
-<h3 style="margin:10px 0 2px;font-size:14px;color:#ffffff;">💎Cojunto corto adidas 40€</h3>
+<h3 style="margin:10px 0 2px;font-size:14px;color:#ffffff;">💎Conjunto corto Adidas  37€</h3>
 <p style="font-size:10px;color:#bdbdbd;margin:2px 0;">Ref: 00001</p>
 
 <select id="color" onchange="cambiarColor()" style="width:100%;margin-top:6px;
@@ -150,6 +154,7 @@ document.getElementById("color").value = "";
 </script>
 
 ' style="width:100%;height:620px;border:none;"></iframe>
+  <!-- 🔻 PEGA AQUÍ TUS IFRAMES / CATÁLOGO 🔻 -->
 
 </div>
 
