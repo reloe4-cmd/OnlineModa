@@ -1,2 +1,0 @@
-# OnlineModa
-Tienda/Online/Moda/
