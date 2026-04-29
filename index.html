@@ -77,8 +77,8 @@ display:flex;align-items:center;justify-content:center;overflow:hidden;">
 <button onclick="prev()" style="position:absolute;top:100px;left:6px;background:rgba(0,0,0,0.6);color:white;border:none;border-radius:50%;width:28px;height:28px;">‹</button>
 <button onclick="next()" style="position:absolute;top:100px;right:6px;background:rgba(0,0,0,0.6);color:white;border:none;border-radius:50%;width:28px;height:28px;">›</button>
 
-<h3 style="margin:10px 0 2px;font-size:16px;color:#ffffff;">💎Conjunto Adidas corto 2 colores 35</h3>
-<p style="font-size:11px;color:#bdbdbd;margin:2px 0;">Ref: €</p>
+<h3 style="margin:10px 0 2px;font-size:16px;color:#ffffff;">💎Conjunto cortos verano (Pantalón y Camiseta) 37€</h3>
+<p style="font-size:11px;color:#bdbdbd;margin:2px 0;">Ref: 0001</p>
 
 <select id="color" onchange="cambiarColor()" style="width:100%;margin-top:6px;
 background:#2a2a2a;color:white;border:none;border-radius:6px;padding:8px;">
@@ -123,18 +123,12 @@ function next(){
   if(productos.length === 0) return;
   i = (i + 1) % productos.length;
   actualizarImagen();
-  if(document.getElementById("color").value !== ""){
-    document.getElementById("color").value = productos[i].color;
-  }
 }
 
 function prev(){
   if(productos.length === 0) return;
   i = (i - 1 + productos.length) % productos.length;
   actualizarImagen();
-  if(document.getElementById("color").value !== ""){
-    document.getElementById("color").value = productos[i].color;
-  }
 }
 
 function cambiarColor(){
@@ -149,17 +143,31 @@ function cambiarColor(){
 }
 
 function enviar(){
+  var color = document.getElementById("color").value;
+  var talla = document.getElementById("talla").value;
+  var nombre = document.getElementById("nombre").value;
+  var telefonoCliente = document.getElementById("telefonoCliente").value;
+  var direccion = document.getElementById("direccion").value;
+  var ciudad = document.getElementById("ciudad").value;
+  var cp = document.getElementById("cp").value;
+
   var mensaje =
-  "🛍️ NUEVO PEDIDO%0A%0A" +
-  "Producto: Conjunto Adidas corto 2 colores%0A" +
-  "Precio: 35%0A" +
-  "Referencia: €%0A%0A";
+  "🛍️ *NUEVO PEDIDO*\n\n" +
+  "Producto: Conjunto cortos verano (Pantalón y Camiseta)\n" +
+  "Precio: 37€\n" +
+  "Referencia: 0001\n\n" +
+  "Color: " + color + "\n" +
+  "Talla: " + talla + "\n\n" +
+  "Nombre: " + nombre + "\n" +
+  "Teléfono: " + telefonoCliente + "\n" +
+  "Dirección: " + direccion + "\n" +
+  "Ciudad: " + ciudad + "\n" +
+  "CP: " + cp;
 
   window.open("https://wa.me/34607877328?text=" + encodeURIComponent(mensaje));
 }
 
 actualizarImagen();
-document.getElementById("color").value = "";
 
 </script>
 
